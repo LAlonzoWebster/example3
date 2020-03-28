@@ -1,0 +1,462 @@
+<html class="js" lang="en"><!--<![endif]--><head><script type="text/javascript">
+
+    (function() {
+        if(typeof amzn_assoc_utils==="undefined"){amzn_assoc_utils={};}if(typeof amzn_assoc_utils.parse==="undefined"){amzn_assoc_utils.parse=(function(){var d,b,a={'"':'"',"\\":"\\","/":"/",b:"\b",f:"\f",n:"\n",r:"\r",t:"\t"},m,k=function(n){throw {name:"SyntaxError",message:n,at:d,text:m};},g=function(n){if(n&&n!==b){k("Expected '"+n+"' instead of '"+b+"'");}b=m.charAt(d);d+=1;return b;},f=function(){var o,n="";if(b==="-"){n="-";g("-");}while(b>="0"&&b<="9"){n+=b;g();}if(b==="."){n+=".";while(g()&&b>="0"&&b<="9"){n+=b;}}if(b==="e"||b==="E"){n+=b;g();if(b==="-"||b==="+"){n+=b;g();}while(b>="0"&&b<="9"){n+=b;g();}}o=+n;if(!isFinite(o)){k("Bad number");}else{return o;}},h=function(){var q,p,o="",n;if(b==='"'){while(g()){if(b==='"'){g();return o;}if(b==="\\"){g();if(b==="u"){n=0;for(p=0;p<4;p+=1){q=parseInt(g(),16);if(!isFinite(q)){break;}n=n*16+q;}o+=String.fromCharCode(n);}else{if(typeof a[b]==="string"){o+=a[b];}else{break;}}}else{o+=b;}}}k("Bad string");},j=function(){while(b&&b<=" "){g();}},c=function(){switch(b){case"t":g("t");g("r");g("u");g("e");return true;case"f":g("f");g("a");g("l");g("s");g("e");return false;case"n":g("n");g("u");g("l");g("l");return null;}k("Unexpected '"+b+"'");},l,i=function(){var n=[];if(b==="["){g("[");j();if(b==="]"){g("]");return n;}while(b){n.push(l());j();if(b==="]"){g("]");return n;}g(",");j();}}k("Bad array");},e=function(){var o,n={};if(b==="{"){g("{");j();if(b==="}"){g("}");return n;}while(b){o=h();j();g(":");if(Object.hasOwnProperty.call(n,o)){k('Duplicate key "'+o+'"');}n[o]=l();j();if(b==="}"){g("}");return n;}g(",");j();}}k("Bad object");};l=function(){j();switch(b){case"{":return e();case"[":return i();case'"':return h();case"-":return f();default:return b>="0"&&b<="9"?f():c();}};return function(p,o){var n;m=p;d=0;b=" ";n=l();j();if(b){k("Syntax error");}return n;};}());}if(typeof amzn_assoc_utils.stringify==="undefined"){amzn_assoc_utils.stringify=function(b){var a="";if(typeof JSON!=="undefined"){a=JSON.stringify(b);}return a;};}if(typeof amzn_assoc_utils.addCssRules==="undefined"){amzn_assoc_utils.addCssRules=function(g,n){var h=document.createElement("style"),m,e=0,k="";h.appendChild(document.createTextNode(""));document.head.appendChild(h);m=h.sheet;for(e=0,rl=n.length;e<rl;e++){var d=1,l=n[e],b=n[e][0],f="";if(Object.prototype.toString.call(l[1][0])==="[object Array]"){l=l[1];d=0;}for(var c=l.length;d<c;d++){var a=l[d];f+=a[0]+":"+a[1]+(a[2]?" !important":"")+";\n";}if(typeof g==="string"){m.insertRule(g+"{"+b+"{"+f+"}}",m.cssRules.length);}else{m.insertRule(b+"{"+f+"}",m.cssRules.length);}}};}window.trackingUtils=function(l,c,e,o,p,h,d,r,t,n,q){var g={},j=new RegExp("/(ref=[\\w]+)/?","i"),a="assocPayloadId",i=function(u){return u&&encodeURIComponent(u).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;");},m=(function(){var u=document.createElement("a");u.href=(window.location!==window.parent.location)?document.referrer:document.location;return u.protocol+"//"+u.hostname+((u.port===""||u.port==="80"||u.port==="443")?"":(":"+u.port))+(u.pathname.indexOf("/")!==0?("/"+u.pathname):u.pathname);}()),s=(function(){return i(m);}()),k=function(u,w,x,v){if(typeof x==="string"&&x!==""){if(u.search===""){u.search="?"+w+"="+x;}else{if(!u.search.match(new RegExp("[?&]"+w+"="))){u.search=u.search.replace(/\?/,"?"+w+"="+x+"&");}else{if(v){u.search=u.search.replace(new RegExp(w+"=([^&]*)"),w+"="+x);}}}}return u;},f=function(w,u,v){if(typeof v==="string"&&v!==""){if(!w.match(/\?/)){w=w+"?"+u+"="+v;}else{if(!w.match(u)){w=w.replace(/\?/,"?"+u+"="+v+"&");}}}return w;},b=function(v){var u=(typeof d!=="undefined")?d:0;if(typeof v!=="undefined"){u=v;}return u;};g.addRefUrls=function(z,A,v,u){var B=new RegExp("^http://.*(amazon|endless|myhabit|amazonwireless|javari|smallparts)\\.(com|ca|co\\.jp|de|fr|co\\.uk|cn|it|es)/.*","i"),w,y,x;for(x=0;x<z.length;x++){z[x].rel="nofollow";w=String(z[x].href);if(y=w.match(B)){z[x].href=g.addTrackingParameters(z[x],A,v,u);}}};g.addRefRefUrl=function(u){return k(u,"ref-refURL",s);};g.getRefRefUrl=function(){return s;};g.getRawRefUrl=function(){return m;};g.addSignature=function(v,u,w){return k(k(v,"sig",u),"sigts",w);};g.addLinkCode=function(v,u){return k(v,"linkCode",u);};g.addTrackingId=function(v,u){return k(v,"tag",u);};g.addLinkId=function(u,v){return k(u,"linkId",v);};g.addSubtag=function(u,v){return k(u,"ascsubtag",v);};g.addCreativeAsin=function(u,v){return k(k(u,"creativeASIN",v),"adId",v);};g.addAdType=function(v,u){return k(v,"adType",u);};g.addAdMode=function(u,v){return k(u,"adMode",v);};g.addAdFormat=function(v,u){return k(v,"adFormat",u);};g.addImpressionTimestamp=function(u,v){if(typeof v==="number"){v=v.toString();}return k(u,"impressionTimestamp",v);};g.convertToRedirectedUrl=function(u,x,v){var w=document.createElement("a");w.setAttribute("href",x);if(typeof v!=="undefined"){k(w,v,i(u.getAttribute("href")),true);}else{w.setAttribute("href",x+"/"+w.getAttribute("href"));}u.setAttribute("href",w.getAttribute("href"));return u;};g.getImpressionToken=function(){return h;};g.generateTransitId=function(){return g.getHashedImpressionToken();};g.getHashedImpressionToken=function(){var u=o.split("/");var v=u[u.length-2];return v;};g.getTransitId=function(){if(typeof assoc_session_storage!=="undefined"){var u=assoc_session_storage.get(a);return u;}return null;};g.getClickUrl=function(){return p;};g.addImpressionToken=function(v,w){var u=b(w);if(typeof h==="string"&&h!==""){k(v,"imprToken",h);if(typeof u!=="undefined"){k(v,"slotNum",u);}}return v;};g.addImpressionTokenStr=function(w,v){var u=b(v);if(typeof h==="string"&&h!==""){w=f(w,"imprToken",h);if(typeof u!=="undefined"){w=f(w,"slotNum",u);}}return w;};g.addTrackingParameters=function(A,B,z,E,x,u,y,w,v,F,D,C){return g.addSignature(g.addCreativeAsin(g.addLinkId(g.addTrackingId(g.addSubtag(g.addLinkCode(g.addRefRefUrl(g.addImpressionToken(g.addRefMarker(g.addAdType(g.addAdMode(g.addAdFormat(g.addImpressionTimestamp(A,C),D),F),v),x))),z),r),E),B),u),y,w);};g.addRefMarker=function(v,x){var w,u=false;if(typeof x==="undefined"){return v;}if(w=v.pathname.match(j)){v.pathname=v.pathname.replace(w[1],"ref="+x);}else{u=(v.pathname.charAt(v.pathname.length-1)==="/");v.pathname=v.pathname+(u?"":"/")+"ref="+x;}return v;};g.getRefMarker=function(u){var v;if(v=u.pathname.match(j)){return v[1].substr(4);}else{return undefined;}};g.getCurrentURL=function(){return(window.location!==window.parent.location)?document.referrer:document.location.href;};g.makeForesterCall=function(w){var u=undefined,v;if(typeof JSON!=="undefined"){v=JSON.stringify(w);}else{if(typeof amzn_assoc_utils!=="undefined"&&typeof amzn_assoc_utils.stringify==="function"){v=amzn_assoc_utils.stringify(w);}else{return;}}if(typeof o==="string"){u=o+"?assoc_payload="+encodeURIComponent(v);g.generateImage(u);}};g.recordImpression=function(v,u,x,w,y){x.linkCode=v;x.trackingId=u;x.refUrl=g.getCurrentURL();if(n||!t){g.makeForesterCall(x);}else{g.addABPFlag(x,g.makeForesterCall);}};g.createAssocPayload=function(y,w,v,u){y.linkCode=w;y.trackingId=v;y.refUrl=u;var x="";if(typeof amzn_assoc_utils!=="undefined"&&typeof amzn_assoc_utils.stringify==="function"){x=amzn_assoc_utils.stringify(y);}return x;};g.recordAESImpression=function(w,u,x){if(typeof q==="string"){var z=g.createAssocPayload(x,w,u,g.getCurrentURL());var v=g.getHashedImpressionToken();var y=q+v+"/pixel?assoc_payload="+encodeURIComponent(z);g.generateImage(y);}};g.recordTransit=function(){if(!(g.getTransitId())||g.isUTMParamPresentInUrl(g.getCurrentURL())){assoc_session_storage.set(a,g.generateTransitId());}};g.isUTMParamPresentInUrl=function(v){var u=v.match(/utm_source=/i);return(u!==null);};g.addAAXClickUrls=function(v){var x,w,u;if(typeof v==="undefined"||typeof p==="undefined"){return;}for(w=0;w<v.length;w++){u=String(v[w].href);if(u.indexOf(p)<0){x=p+u;v[w].href=x;}}};g.addAAXClickUrl=function(u){if(typeof u==="undefined"||u.indexOf(p)===0){return u;}return p+u;};g.updateLinks=function(v,x){var w,u;if(typeof x!=="function"){return;}for(w=0;w<v.length;w++){u=String(v[w].href);v[w].href=x(u);}};g.elementInViewPort=function(u){var v=u.getBoundingClientRect(),w=(v.top>=0&&v.left>=0&&v.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&v.right<=(window.innerWidth||document.documentElement.clientWidth));return{posX:v.left+window.pageXOffset,posY:v.top+window.pageYOffset,inViewPort:w};};g.recordViewability=function(z,y,v,w){if(typeof o==="string"){var x=g.createViewbilityPayload(z,y,v,w);var u=o+x+"&cb="+(new Date()).getTime();g.generateImage(u);}};g.recordAESViewability=function(B,A,v,w){if(typeof q==="string"){var x=g.createViewbilityPayload(B,A,v,w);var u=g.getHashedImpressionToken();var z=encodeURIComponent(x);var y=q+u+"/pixel/"+z+"&cb="+(new Date()).getTime();g.generateImage(y);}};g.createViewbilityPayload=function(z,y,v,x){var w={};if(typeof y!=="undefined"){w.above_the_fold=y;}if(typeof v!=="undefined"){w.topPos=v;}if(typeof x!=="undefined"){w.leftPos=x;}if(typeof z!=="undefined"){if(Object.keys(w).length===0){w.viewable=true;}w.slotNum=z;}var u="";if(typeof amzn_assoc_utils!=="undefined"&&typeof amzn_assoc_utils.stringify==="function"){u=amzn_assoc_utils.stringify({adViewability:[w]});}return u;};g.generateImage=function(u){if(typeof u!=="undefined"){(new Image()).src=u;}};g.addABPFlag=function(x,F){var z=false,y=2,w=document.body?document.body.appendChild(new Image()):new Image(),v=document.body?document.body.appendChild(new Image()):new Image(),C=false,A=false,u=Math.random()*11,E=t+"?ch=*&rn=*",D=function(H,G){if(y===0||G>1000){x.supplySideMetadata={ABPInstalled:y===0&&z};H(x);}else{setTimeout(function(){D(H,G*2);},G*2);}},B=function(){if(--y){return;}z=!C&&A;};w.style.display="none";v.style.display="none";w.onload=B;w.onerror=function(){C=true;B();};w.src=E.replace(/\*/,1).replace(/\*/,u);v.onload=B;v.onerror=function(){A=true;B();};v.src=E.replace(/\*/,2).replace(/\*/,u);D(F,250);};return g;};var assoc_session_storage=(function(){var a={};a.get=function(c){var d=null;if(typeof(window.sessionStorage)!=="undefined"){try{d=window.sessionStorage.getItem(c);}catch(b){}}return d;};a.set=function(c,d){if(typeof(window.sessionStorage)!=="undefined"){try{window.sessionStorage.setItem(c,d);}catch(b){}}};return a;}());window.elemTracker=function(b){var a={};a.trackElements=function(d,c){var f,e;if(typeof d!=="undefined"&&d.length>0&&typeof c==="function"){window.addEventListener("scroll",function(){for(f=0;f<d.length;f++){e=b.elementInViewPort(d[f]);if(e.inViewPort){c();}}},false);}};return a;};
+        var amznAutoTaggerMaker=function(h,v,B){var D={CA:"ca",CN:"cn",IN:"in",DE:"de",FR:"fr",GB:"co.uk",JP:"co.jp",US:"com"},j={CA:[],CN:[],IN:[],DE:["javari"],FR:["javari"],GB:["javari"],JP:["javari"],US:["smallparts","amazonwireless","endless","myhabit"]},F=(function(){var P=-1,O={};O.getNextSlotNum=function(){return ++P;};return O;}()),q,o,e=Math.max(document.body.scrollHeight,document.body.offsetHeight,document.documentElement.clientHeight,document.documentElement.scrollHeight,document.documentElement.offsetHeight),m=Math.max(document.body.scrollWidth,document.body.offsetWidth,document.documentElement.clientWidth,document.documentElement.scrollWidth,document.documentElement.offsetWidth),y={totalDocWidth:m,totalDocHeight:e,logType:"onetag_pageload",pageTitle:document.title},a="w50",J="w61",H="g12",C={},b=new RegExp("%3F"),w=new Object(),x=false,l="",s="",u=0,L=0,d=0,G=new RegExp("amzn.to"),r=new RegExp(h.redirectorEndPoint),E=["kdp.amazon.com"],N=[],I="assocPayloadId",c=function(P){var Q,O=false;for(Q=0;Q<E.length;Q++){if(P.match(E[Q])){O=true;break;}}return O;},p=function(O){return O.nextSibling&&O.nextSibling.tagName==="IMG"&&O.nextSibling.hasAttribute("src")&&(O.nextSibling.getAttribute("src").search(/ir-[a-z]{2}\.amazon-adsystem\.com/)>-1||O.nextSibling.getAttribute("src").search(/www\.assoc-amazon\.*/)>-1);},n=function(O){if(!O.href.match(r)){O.href=h.redirectorEndPoint+O.href;}},k=function(Y,ae){var Z=new RegExp("/(ref=[\\w]+)/?","i"),U,ad=false,P,S,T=false,X=Y.search.match(/\?tag=([^&]+)|&tag=([^&]+)|\?tag-value=([^&]+)|&tag-value=([^&]+)|\?tag_value=([^&]+)|&tag_value=([^&]+)|\?t=([^&]+)|&t=([^&]+)/),R=Y.search.match(/\?tag=|&tag=|\?tag-value=|&tag-value=|\?tag_value=|&tag_value=|\?t=|&t=/),O=Y.search.match(/(linkCode|link_code|lc)=([^&]+)/i),W=v.elementInViewPort(Y),ac={autoTagged:false,overwritten:false,geoRedirected:false,atf:W.inViewPort},Q=F.getNextSlotNum(),V={destinationURL:Y.href,slotNum:Q,atfInFirstLoad:W.inViewPort,posX:W.posX,posY:W.posY,logType:"onetag_textlink"},ab=p(Y),aa;ac.slotNum=Q;if(Y.search===""){Y.search="?imprToken="+v.getImpressionToken()+"&slotNum="+Q;}else{Y.search=Y.search.replace(/\?/,"?imprToken="+v.getImpressionToken()+"&slotNum="+Q+"&");}if(h.enableAutoTagging){ac.autoTagged=true;if(X){if(h.overwrite){for(S=1;S<9;S++){if(X[S]!=undefined){Y.search=Y.search.replace(X[S],ae);break;}}ac.overwritten=true;ad=true;}}else{if(R){Y.search=Y.search.replace(/tag=/,"tag="+ae);ad=true;}else{Y.search=Y.search.replace(/\?/,"?tag="+ae+"&");ad=true;}}}if(O&&typeof h.overridableLinkCodes[O[2]]!=="undefined"){T=true;}if(O&&!T){P=O[2];}else{P=ad?a:J;}if(O){V.oldLinkCode=O[2];Y.search=Y.search.replace(O[2],P);}else{Y.search=Y.search.replace(/\?/,"?linkCode="+P+"&");}if(ad){aa=ae;}else{if(typeof X!=="undefined"&&X instanceof Array&&X.length>=S+1&&typeof X[S]==="string"){aa=X[S];}else{aa="";}}if(C.shouldBeGeoRedirected()){ac.geoRedirected=true;n(Y);}if(Y.hasAttribute("data-amzn-asin")&&!Y.search.match("creativeASIN")){Y.search=Y.search.replace(/\?/,"?creativeASIN="+Y.getAttribute("data-amzn-asin")+"&");}if(C.shouldTrackTransit(h)){v.recordTransit();V[I]=v.getTransitId();}N.push({pos:W,slotNum:Q,linkCode:P,linkInfo:V,skipIRCall:ab,imprTag:aa});Y.href=v.addAAXClickUrl(Y.href);return ac;},A=function(O){if(O.href.match(b)){o=O.href.split(b);O.href=o[0]+"?"+decodeURIComponent(o[1]);}},t=function(P,O,S){var R,Q;for(R=0;R<P.length;R++){for(Q=0;Q<O.length;Q++){if(window.addEventListener){P[R].addEventListener(O[Q],S,false);}else{P[R].attachEvent("on"+O[Q],S);}}}},K=function(O,P){var Q=false;t([O],["touchstart"],function(){Q=false;});t([O],["touchmove"],function(){Q=true;});t([O],["click","touchend"],function(R){if(Q){return;}O.setAttribute("href",P);});t([O],["auxclick","contextmenu"],function(R){O.setAttribute("href",P);});t([O],["mouseup"],function(R){if(R.button===1||R.ctrlKey){O.setAttribute("href",P);}});},M=function(){var O="";for(i=0;i<h.itemRefs.length;i++){if(typeof h.itemRefs[i].type!=="undefined"&&h.itemRefs[i].type==="ASIN"&&typeof h.itemRefs[i].sourceLink!=="undefined"&&String(h.itemRefs[i].sourceLink).match(G)!==null&&typeof h.itemRefs[i].destinationLink!=="undefined"){w[h.itemRefs[i].sourceLink]=h.itemRefs[i].destinationLink;if(l!==""){O=",";}l=l+O+h.itemRefs[i].sourceLink;u++;}}},f=function(P,O){B.trackElements([P],function(){if(typeof O!==undefined&&O.slotNum!==undefined&&(O.viewed===undefined||!O.viewed)){v.recordViewability(O.slotNum);if(C.shouldInteractWithAES(h)){v.recordAESViewability(O.slotNum);}O.viewed=true;}});},g=function(O,P){K(O,O.getAttribute("href"));O.setAttribute("href",P);},z=function(){var Q,P,O;for(Q=0;Q<N.length;Q++){P=N[Q];O=P.pos;v.recordImpression(P.linkCode,P.imprTag,P.linkInfo,P.skipIRCall,P.slotNum);v.recordViewability(P.slotNum,O.inViewPort,O.posX,O.posY);if(C.shouldInteractWithAES(h)){v.recordAESImpression(P.linkCode,P.imprTag,P.linkInfo);v.recordAESViewability(P.slotNum,O.inViewPort,O.posX,O.posY);}}N=[];};if(h.locale!=undefined){q=h.locale;}else{q="US";}C.shouldBeGeoRedirected=function(){return h.enableGeoRedirection&&(h.region!==""&&h.region!==h.viewerCountry);};C.publisherCallBack=function(){window["amzn_assoc_client_cb_"+h.adUnitSlotNum]({type:"onload",data:{},widget:C});};C.decorateLinkElement=function(O){A(O);linkProperties=k(O,h.trackingId);f(O,linkProperties);return linkProperties;};C.shouldTrackTransit=function(O){return((typeof O.disableTransitTracking==="undefined")||!O.disableTransitTracking);};C.shouldInteractWithAES=function(O){return((typeof O.enableAESInteraction!=="undefined")&&O.enableAESInteraction);};C.tagLinks=function(af){var ah,ag,P,aa,aj,ac=[],al=0,X,Z,ai,ae,ak,O,Y,V=0,R=0,ab=0,Q=0,U=0,S=0,T,W,ad="";P=D[q];aa=j[q];aj=new RegExp("^(http|https)://(www|[\\w\\-\\.]+)?amazon\\.("+P+")/","i");if(aa){for(al=0;al<aa.length;al++){X=P;if(P=="co.jp"){X="co.jp|jp";}ac[al]=new RegExp("^(http|https)://(www\\.)?("+aa[al]+")\\.("+X+")/","i");}}Z=af.getElementsByTagName("a");if(!x){M();x=true;}for(ah=0;ah<Z.length;ah++){Y=undefined;ai=String(Z[ah].href);if(ae=ai.match(aj)&&!c(ai)){Y=C.decorateLinkElement(Z[ah]);g(Z[ah],ai);}else{if(h.isShortLinksSupported&&(ak=ai.match(G))!==null){L++;if(s!==""){ad=",";}s=s+ad+Z[ah].href;T=w[Z[ah].href];if(typeof T!=="undefined"){d++;Z[ah].setAttribute("href",T);Y=C.decorateLinkElement(Z[ah]);g(Z[ah],ai);}else{if(C.shouldBeGeoRedirected()){Y=C.decorateLinkElement(Z[ah]);g(Z[ah],ai);}}}else{for(O=0;O<ac.length;O++){if(ae=ai.match(ac[O])){C.decorateLinkElement(Z[ah]);g(Z[ah],ai);}}}}if(typeof Y!=="undefined"){if(Y.autoTagged){R++;}if(Y.overwritten){S++;}if(Y.geoRedirected){ab++;}if(Y.atf){Q++;}else{U++;}V++;}}y.numLinks=V;y.numAutoTaggedLinks=R;y.autoTaggingEnabled=h.enableAutoTagging;y.geoRedirectEnabled=h.enableGeoRedirection;y.disableTransitTracking=h.disableTransitTracking;y.numLinksATF=Q;y.numLinksBTF=U;y.shortLinksInLivePool=l;y.shortLinksInPage=s;y.shortLinksInLivePoolCount=u;y.shortLinksInPageCount=L;y.shortLinksMatchCount=d;if(C.shouldTrackTransit(h)){v.recordTransit();y[I]=v.getTransitId();}v.recordImpression(h.linkCode,h.trackingId,y);if(C.shouldInteractWithAES(h)){v.recordAESImpression(h.linkCode,h.trackingId,y);}t([window],["load"],z);};return C;};
+        var spec = {
+            trackingId : "cre8ivecomman-20",
+            region : "US",
+            overwrite : false,
+            enableAutoTagging : false,
+            linkCode : "w49",
+            overridableLinkCodes :  {   "am1": ""   , "am2": ""   , "am3": ""   , "as1": ""   , "as2": ""   , "as3": ""   , "as4": ""   , "li1": ""   , "li2": ""   , "li3": ""   , "ll1": ""   , "ll2": ""   },
+            enableGeoRedirection : true,
+            redirectorEndPoint : "https://assoc-redirect.amazon.com/g/r/",
+            adUnitSlotNum : "0",
+            itemRefs : [],
+            isShortLinksSupported : true,
+            viewerCountry : "US",
+            disableTransitTracking : false,
+            enableAESInteraction : false
+        }, trackingUtils = window.trackingUtils(
+            "1",
+            "//fls-na.amazon-adsystem.com/1/associates-ads/1/OP/r/json",
+            "//ir-na.amazon-adsystem.com/e/ir",
+            "https://aax-us-east.amazon-adsystem.com/x/px/QqQMvSe6CA3mfEcVYSW8uUUAAAFxHvutFgEAAAFKAclPTrY/", "https://aax-us-east.amazon-adsystem.com/x/c/QqQMvSe6CA3mfEcVYSW8uUUAAAFxHvutFgEAAAFKAclPTrY/", "0tWcU1NheMzf0AP406COIg", undefined, undefined, undefined, true,
+            "https://assoc-na.associate-amazon.com/onetag/"
+        );
+    
+        window.amznAutoTagger = amznAutoTaggerMaker(spec, trackingUtils, window.elemTracker(trackingUtils));
+        window.amznAutoTagger.tagLinks(document);
+        window.amznAutoTagger.publisherCallBack();
+    }());
+    
+     //# sourceURL=dynscript-0.js</script>
+    
+        <meta charset="utf-8">
+    
+        <title>Adham Dannaway | UI/UX Designer &amp; Front End Developer</title>
+    
+        <meta property="og:title" content="Design Portfolio of Adham Dannaway">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.adhamdannaway.com">
+        <meta property="og:image" content="http://www.adhamdannaway.com/wp-content/themes/dannaway/images/portfolio/campaign-monitor-4/main.jpg">
+        <meta property="og:image:width" content="590">
+        <meta property="og:image:height" content="440">
+    
+        <!-- https://t.co/dKP3o1e -->
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="twitter:widgets:csp" content="on">
+        <meta property="fb:app_id" content="381830641890866">
+    
+        <!-- For all browsers -->
+        <link rel="stylesheet" type="text/css" href="http://www.adhamdannaway.com/wp-content/themes/dannaway/style.css">
+    
+        <!--[if (lt IE 9) & (!IEMobile)]>
+        <script src="js/selectivizr-min.js"></script>
+        <![endif]-->
+    
+        <!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="http://www.adhamdannaway.com/wp-content/themes/dannaway/ie.css" />
+        <![endif]-->
+    
+        <!-- JavaScript -->
+        <script src="https://connect.facebook.net/en_US/sdk.js?hash=066405f5b6647697de487b5811e578d9&amp;ua=modern_es6" async="" crossorigin="anonymous"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.5&amp;appId=227683463924663"></script><script src="http://www.adhamdannaway.com/wp-content/themes/dannaway/js/modernizr-2.5.3-min.js"></script>
+        
+    
+        <!-- For iPhone 4 -->
+        <!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/h/apple-touch-icon.png"> -->
+        <!-- For iPad 1-->
+        <!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/m/apple-touch-icon.png"> -->
+        <!-- For the new iPad -->
+        <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/h/apple-touch-icon-144x144-precomposed.png"> -->
+        <!-- For iPhone 3G, iPod Touch and Android -->
+        <!-- <link rel="apple-touch-icon-precomposed" href="img/l/apple-touch-icon-precomposed.png"> -->
+        <!-- For Nokia -->
+        <!-- <link rel="shortcut icon" href="img/l/apple-touch-icon.png"> -->
+        <!-- For everything else -->
+        <link rel="shortcut icon" href="/favicon.ico">
+    
+        <!--iOS -->
+        <!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
+        <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
+        <!-- <link rel="apple-touch-startup-image" href="img/splash.png"> -->
+    
+        <!-- <script>(function(){var p,l,r=window.devicePixelRatio;if(navigator.platform==="iPad"){p=r===2?"img/startup/startup-tablet-portrait-retina.png":"img/startup/startup-tablet-portrait.png";l=r===2?"img/startup/startup-tablet-landscape-retina.png":"img/startup/startup-tablet-landscape.png";document.write('<link rel="apple-touch-startup-image" href="'+l+'" media="screen and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="'+p+'" media="screen and (orientation: portrait)"/>');}else{p=r===2?"img/startup/startup-retina.png":"img/startup/startup.png";document.write('<link rel="apple-touch-startup-image" href="'+p+'"/>');}})()</script> -->
+        <!--Microsoft -->
+    
+        <!-- Prevents links from opening in mobile Safari -->
+        <!-- <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script> -->
+        <meta http-equiv="cleartype" content="on">
+    
+        <link rel="pingback" href="http://www.adhamdannaway.com/xmlrpc.php">
+        
+    
+        <script type="text/javascript">
+    
+          // Eliminate FOUC
+          document.documentElement.className = 'js';
+    
+        </script>
+    
+         
+    <!-- This site is optimized with the Yoast SEO plugin v13.2 - https://yoast.com/wordpress/plugins/seo/ -->
+    <meta name="description" content="UI/UX Designer and Front End Developer with a passion for designing beautiful and functional user experiences.">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="http://www.adhamdannaway.com/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Adham Dannaway | UI/UX Designer &amp; Front End Developer">
+    <meta property="og:description" content="UI/UX Designer and Front End Developer with a passion for designing beautiful and functional user experiences.">
+    <meta property="og:url" content="http://www.adhamdannaway.com/">
+    <meta property="og:site_name" content="Adham Dannaway">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="UI/UX Designer and Front End Developer with a passion for designing beautiful and functional user experiences.">
+    <meta name="twitter:title" content="Adham Dannaway | UI/UX Designer &amp; Front End Developer">
+    <meta name="twitter:site" content="@AdhamDannaway">
+    <meta name="twitter:creator" content="@AdhamDannaway">
+    <script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"http://www.adhamdannaway.com/#website","url":"http://www.adhamdannaway.com/","name":"Adham Dannaway","inLanguage":"en-US","description":"UI/UX Designer &amp; Front End Developer","publisher":{"@id":"http://www.adhamdannaway.com/#/schema/person/"},"potentialAction":{"@type":"SearchAction","target":"http://www.adhamdannaway.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"http://www.adhamdannaway.com/#webpage","url":"http://www.adhamdannaway.com/","name":"Adham Dannaway | UI/UX Designer &amp; Front End Developer","isPartOf":{"@id":"http://www.adhamdannaway.com/#website"},"inLanguage":"en-US","about":{"@id":"http://www.adhamdannaway.com/#/schema/person/"},"datePublished":"2012-09-26T07:48:27+00:00","dateModified":"2014-12-01T03:57:58+00:00","description":"UI/UX Designer and Front End Developer with a passion for designing beautiful and functional user experiences."}]}</script>
+    <!-- / Yoast SEO plugin. -->
+    
+    <link rel="dns-prefetch" href="//ajax.googleapis.com">
+    <link rel="dns-prefetch" href="//s.w.org">
+    <link rel="alternate" type="application/rss+xml" title="Adham Dannaway » home Comments Feed" href="http://www.adhamdannaway.com/home/feed">
+            <script type="text/javascript">
+                window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.adhamdannaway.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+                !function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+            </script><script src="http://www.adhamdannaway.com/wp-includes/js/wp-emoji-release.min.js?ver=5.3.2" type="text/javascript" defer=""></script>
+            <style type="text/css">
+    img.wp-smiley,
+    img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 .07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+    }
+    </style>
+        <link rel="stylesheet" id="wp-block-library-css" href="http://www.adhamdannaway.com/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2" type="text/css" media="all">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js?ver=5.3.2"></script>
+    <link rel="https://api.w.org/" href="http://www.adhamdannaway.com/wp-json/">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.adhamdannaway.com/xmlrpc.php?rsd">
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.adhamdannaway.com/wp-includes/wlwmanifest.xml"> 
+    <meta name="generator" content="WordPress 5.3.2">
+    <link rel="shortlink" href="http://www.adhamdannaway.com/">
+    <link rel="alternate" type="application/json+oembed" href="http://www.adhamdannaway.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.adhamdannaway.com%2F">
+    <link rel="alternate" type="text/xml+oembed" href="http://www.adhamdannaway.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.adhamdannaway.com%2F&amp;format=xml">
+    
+    <style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+    .fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+    .fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style><script charset="utf-8" src="https://platform.twitter.com/js/button.93a0c25c2d2f3081c705c98c2d9dec0e.js"></script></head>
+    
+    <body class="clearfix">
+    
+    <!-- Include Facebook like button -->
+    <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=227683463924663";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    
+        <header id="header" style="opacity: 1; top: 0px;">
+    
+            <div class="row">
+    
+                <div class="col-12">
+    
+                    <a id="logo" class="logo" href="http://www.adhamdannaway.com/">Adham Dannaway</a>
+                    <div class="icon-nav">navigation</div>
+                    
+                    <nav>
+    
+                        <ul id="nav">
+                            <li class="page_item page-item-2"><a href="http://www.adhamdannaway.com/about">about</a></li>
+    <li class="page_item page-item-5"><a href="http://www.adhamdannaway.com/featured">featured</a></li>
+    <li class="page_item page-item-7"><a href="http://www.adhamdannaway.com/portfolio">portfolio</a></li>
+    <li class="page_item page-item-9"><a href="http://www.adhamdannaway.com/blog">blog</a></li>
+     
+    
+                            <li>
+                                <ul class="social">
+                                    <li class="email"><span id="email-tooltip" tooltip="Click to copy my email address to your clipboard 😀"><a id="email" data-clipboard-text="adhamdannaway@gmail.com">email</a></span></li>
+                                    <li class="twitter"><a href="https://www.twitter.com/AdhamDannaway" title="Follow me on Twitter" target="_blank">twitter</a></li>
+                                    <li class="linkedin"><a href="https://au.linkedin.com/in/adhamdannaway" title="Connect with me on Linkedin" target="_blank">linkedin</a></li>
+                                    <li class="facebook"><a href="https://www.facebook.com/ilikeadham" title="Like me on Facebook" target="_blank">facebook</a></li>
+                                    <li class="dribbble"><a href="https://www.dribbble.com/adhamdannaway" title="See my Dribbble shots" target="_blank">dribbble</a></li>
+                                </ul>
+                            </li>
+    
+                        </ul>
+    
+                    </nav>
+    
+                </div>
+    
+            </div>
+    
+        </header>  
+    
+        <div id="content" class="content clearfix home" style="opacity: 1;">
+    
+            <section id="section" class="light nopad-t nopad-b">
+    
+                <div class="row">
+    
+                    <div class="col-12">
+                        
+                        <div id="face" class="face">
+    
+                            <a href="/portfolio">
+                                <div id="designer" class="designer" style="opacity: 1;">
+                                    <div id="designer-desc" class="description" style="opacity: 1;">
+                                        <h1>designer</h1>
+                                        <p>UI/UX Designer with a passion for designing beautiful and functional user experiences.</p>
+                                    </div>
+                                </div>
+                            </a>
+    
+                            <a href="/about">
+                                <div id="coder" class="coder" style="opacity: 1;">
+                                    <div id="coder-desc" class="description" style="opacity: 1;">
+                                        <h1>&lt;coder&gt;</h1>
+                                        <p>Front End Developer who focuses on writing clean, elegant and efficient code.</p>
+                                    </div>
+                                </div>
+                            </a>
+    
+                            <img id="face-img" class="face-img" src="http://www.adhamdannaway.com/wp-content/themes/dannaway/images/adham-dannaway-designer-coder.jpg" alt="adham dannaway ui designer">
+    
+                            <div id="designer-img" class="designer-img" style="left: 100px; opacity: 1; width: 420px;"></div>
+                            <div id="coder-img" class="coder-img" style="right: 100px; opacity: 1; width: 420px;"></div>
+                            <div id="designer-bg" class="designer-bg" style="left: 100px; opacity: 1;"></div>
+                            <div id="coder-bg" class="coder-bg" style="right: 100px; opacity: 1;"></div>
+    
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+            </section>
+    
+            <div>
+    
+                <section class="dark">
+                    <div class="row">
+                        <div class="col-12">
+                            
+                            <div id="content-detail" style="opacity: 1; top: 0px;">
+    
+                                <!-- Show 3 random portfolio posts -->
+                                <div class="header-center"><h3>Some of my latest work</h3></div>
+                                <ul id="thumbs" class="thumbs clearfix">
+    
+                                                                                                                        
+    
+                                        <li>
+                                            <a href="http://www.adhamdannaway.com/portfolio/rethinking-flight-search">
+                                                <img src="http://www.adhamdannaway.com/wp-content/uploads/2016/07/feature-rethinking-flight-search.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://www.adhamdannaway.com/wp-content/uploads/2016/07/feature-rethinking-flight-search.jpg 628w, http://www.adhamdannaway.com/wp-content/uploads/2016/07/feature-rethinking-flight-search-300x175.jpg 300w" sizes="(max-width: 628px) 100vw, 628px">								            <div class="description">
+                                                    <span class="arrow-r"></span>
+                                                    <h4>Rethinking flight search</h4>
+                                                    <p>Speaking event</p>
+                                                </div>
+                                            </a>
+                                        </li>
+    
+                                                                                         
+    
+                                        <li>
+                                            <a href="http://www.adhamdannaway.com/portfolio/petra-capital">
+                                                <img src="http://www.adhamdannaway.com/wp-content/uploads/2012/10/feature-petra-capital.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://www.adhamdannaway.com/wp-content/uploads/2012/10/feature-petra-capital.jpg 628w, http://www.adhamdannaway.com/wp-content/uploads/2012/10/feature-petra-capital-300x175.jpg 300w" sizes="(max-width: 628px) 100vw, 628px">								            <div class="description">
+                                                    <span class="arrow-r"></span>
+                                                    <h4>Petra Capital</h4>
+                                                    <p>Brand &amp; website design</p>
+                                                </div>
+                                            </a>
+                                        </li>
+    
+                                                                                         
+    
+                                        <li>
+                                            <a href="http://www.adhamdannaway.com/portfolio/hrhr">
+                                                <img src="http://www.adhamdannaway.com/wp-content/uploads/2012/08/feature-hrhr.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://www.adhamdannaway.com/wp-content/uploads/2012/08/feature-hrhr.jpg 628w, http://www.adhamdannaway.com/wp-content/uploads/2012/08/feature-hrhr-300x175.jpg 300w" sizes="(max-width: 628px) 100vw, 628px">								            <div class="description">
+                                                    <span class="arrow-r"></span>
+                                                    <h4>HRHR</h4>
+                                                    <p>Brand &amp; website design</p>
+                                                </div>
+                                            </a>
+                                        </li>
+    
+                                                                      
+                                 </ul>
+    
+                            </div>
+    
+                        </div>
+                    </div>
+                </section>
+    
+            </div><!-- / content-detail -->
+    
+        </div><!-- / content -->
+    
+    
+    <footer id="footer" role="contentinfo" style="opacity: 1; top: 0px;">
+    
+        <div class="row">
+    
+            <div class="col-12">
+    
+                <div class="left"><a class="transition" href="http://www.adhamdannaway.com/">© 2020 Adham Dannaway</a></div>
+                
+                <nav id="nav-footer">
+    
+                    <ul>
+                        <li class="page_item page-item-2"><a href="http://www.adhamdannaway.com/about">about</a></li>
+    <li class="page_item page-item-5"><a href="http://www.adhamdannaway.com/featured">featured</a></li>
+    <li class="page_item page-item-7"><a href="http://www.adhamdannaway.com/portfolio">portfolio</a></li>
+    <li class="page_item page-item-9"><a href="http://www.adhamdannaway.com/blog">blog</a></li>
+                    </ul>
+    
+                </nav>
+    
+                <div class="right">
+                    <iframe src="https://www.facebook.com/plugins/like.php?app_id=177751785616304&amp;href=http%3A%2F%2Fwww.facebook.com%2F%23%21%2FiLikeAdham&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowtransparency="true"></iframe>
+                    <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 166px; height: 20px;" title="Twitter Follow Button" src="https://platform.twitter.com/widgets/follow_button.d0f13be8321eb432fba28cfc1c3351b1.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=AdhamDannaway&amp;show_count=false&amp;show_screen_name=true&amp;size=m&amp;time=1585362742380" data-screen-name="AdhamDannaway"></iframe><script src="https://platform.twitter.com/widgets.js" type="text/javascript"></script>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+        <div class="gradient-white">
+            <a class="top" href="#top">back to top</a>
+        </div>
+    
+    </footer>
+    
+    <script type="text/javascript" src="http://www.adhamdannaway.com/wp-includes/js/wp-embed.min.js?ver=5.3.2"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+    <script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script> 
+    <script src="http://www.adhamdannaway.com/wp-content/themes/dannaway/js/clipboard.js-master/dist/clipboard.min.js"></script>
+    <script src="http://www.adhamdannaway.com/wp-content/themes/dannaway/js/script.js"></script>
+    <script type="text/javascript">
+    <!--
+    
+    //If browser is IE8 or older we show IE specific page
+    if(ie < 9){
+        ieMessage();
+    }
+    
+    /*
+    * Call functions when dom is ready
+    */
+    $(document).ready(function() {
+    
+        // Hide browser top bar in mobiles
+        $('body').scrollTop(1);
+    
+        // Toggle Navigation for mobile devices
+        $('.icon-nav').on('click', function(){
+            $('header nav').slideToggle();
+            $(this).toggleClass('active');
+        });
+    
+        // Function to scroll to top
+        $('a[href=#top]').click(function(){
+    
+            $('html, body').animate({scrollTop:0}, 1000, 'easeInOutQuad');
+            return false;
+        });
+    
+        // Function to fade in image sprites
+          $('.sprite').fadeSprite();
+    
+        //Function for thumbnail hover effect
+        $('.thumbs li').hoverThumb();
+    
+        // Function to animate when leaving page
+        $('.transition, #nav .page_item a, #nav-footer a, #thumbs a, #next a, #prev a, #logo, #face a').leavePage();	
+    
+        // Animate the header on first			
+        $('#header').stop().animate({'opacity': '1', 'top':'0'}, 1000);
+    
+    
+        // Copy email address to clipboard	
+        var clipboard = new ClipboardJS('#email');
+    
+        clipboard.on('success', function(e) {
+            $('#email-tooltip').attr("tooltip", "Yay! My email address has been copied to your clipboard ✅");
+            $('#email-tooltip').addClass('success');
+    
+            // Reset
+            $('#email-tooltip').mouseleave(function() {
+    
+                setTimeout( function(){
+                    $('#email-tooltip').attr("tooltip", "Click to copy my email address to your clipboard 😀");
+                    $('#email-tooltip').removeClass('success');
+                }, 300);
+            });
+    
+            e.clearSelection();
+        });
+    
+        clipboard.on('error', function(e) {
+            $('#email-tooltip').attr("tooltip", "Sorry, there was a technical glitch. Please try again.");
+            $('#email-tooltip').toggleClass('fail');
+        });
+    
+    
+        // Preload the page with jPreLoader
+        $('body').jpreLoader({
+    
+            showSplash: true
+    
+        }, function() {	
+    
+            //Show the page once images are loaded	
+                    
+                $('#face').animateHome();
+                $('#face').resizeFace();
+    
+                
+        });
+    
+    });
+    -->
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-2290797-3', 'adhamdannaway.com');
+      ga('send', 'pageview');
+    
+    </script>
+    
+    <!-- Amazon OneTag -->
+    <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&amp;adInstanceId=b678d37e-a438-49a0-8c04-1b28e372c8ec"></script><div id="amzn_assoc_ad_div_adunit_0"></div>
+    
+    
+     
+    <!--
+    Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+    
+    Page Caching using disk: enhanced 
+    
+    Served from: www.adhamdannaway.com @ 2020-03-09 12:24:44 by W3 Total Cache
+    --><iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.d0f13be8321eb432fba28cfc1c3351b1.html?origin=http%3A%2F%2Fwww.adhamdannaway.com" title="Twitter settings iframe" style="display: none;"></iframe></body></html>
